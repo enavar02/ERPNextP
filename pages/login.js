@@ -52,10 +52,19 @@ const Login = () => {
                 });
                 //console.log(data);
                 //guardar el token en localStorage
-                const { token } = data.autenticarUsuario;
-                localStorage.setItem('token', token);
+               
+
+                setTimeout(() =>{
+                    const { token } = data.autenticarUsuario;
+                    localStorage.setItem('token', token);
+                },1000);
+               
                 //Consultar de Apollo
-                router.push('/');
+                setTimeout(()=>{
+                    guardarMensaje(null);
+                    router.push('/');
+                },2000);
+                
             } catch (error) {
                 guardarMensaje(error.message.replace('GraphQL error:', ''));
 
