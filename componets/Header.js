@@ -46,7 +46,7 @@ const Header = () => {
     return ( 
         
         <div className="sm:flex sm:justify-end ">
-            {refetch()}
+            <button onClick={() => refetch()}>Refetch!</button>
             <p className="mr-5 mb-5 lg:mb-0">Hola: {nombre} {apellido}</p>
             <button
             onClick={() => cerrarSesion()}
