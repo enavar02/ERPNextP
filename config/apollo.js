@@ -3,8 +3,10 @@ import fetch from 'node-fetch';
 import { setContext } from 'apollo-link-context'
 
 const httpLink = createHttpLink({
-    uri: 'https://fathomless-basin-38658.herokuapp.com/',
-    //uri: 'http://localhost:4000/',
+    //uri: 'https://fathomless-basin-38658.herokuapp.com/',
+    // uri: 'http://localhost:4000/',
+    uri: 'https://developmyappserver.azurewebsites.net/',
+    
     fetch
 });
 const authLink = setContext((_,{headers}) =>{
