@@ -22,7 +22,7 @@ const Index = () => {
   // Consultar de Apollo
   const { data, loading, error, refetch } = useQuery(OBTENER_CLIENTES_USUARIO);
 
-  //refetch();
+  
   //Routing
   const router = useRouter(); 
 
@@ -41,7 +41,7 @@ const Index = () => {
   
 
 //console.log(data);
-
+refetch();
   return(
     <div>
       <Layout>

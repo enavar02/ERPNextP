@@ -30,13 +30,13 @@ const Pedidos = () => {
 
   const {data, loading, error, refetch} = useQuery(OBTENER_PEDIDOS);
 
-  //refetch();
+ 
   
   if(loading) return 'Cargando...';
 
   const { obtenerPedidosVendedor } = data;
   console.log(data);
-
+  refetch();
   return(
     <div>
       <Layout>
