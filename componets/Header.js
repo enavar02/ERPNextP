@@ -43,10 +43,10 @@ const Header = () => {
         localStorage.removeItem('token');
         router.push('/login');
     }
+    refetch();
     return ( 
         
         <div className="sm:flex sm:justify-end ">
-            <button onClick={() => refetch()}>Refetch!</button>
             <p className="mr-5 mb-5 lg:mb-0">Hola: {nombre} {apellido}</p>
             <button
             onClick={() => cerrarSesion()}
