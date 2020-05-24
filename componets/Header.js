@@ -19,7 +19,7 @@ const Header = () => {
     //Query de apollo
     const {data, loading, error, refetch}= useQuery(OBTENER_USUARIO);
 
-    refetch();
+    //refetch();
     //Routing
     const router = useRouter();
 
